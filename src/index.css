@@ -2223,13 +2223,89 @@ select {
 }
     }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
    
 
-      .Header{
-        opacity: 0;
+.Header{
+  opacity: 1;
+    
+   }
+ 
+   .Header .left{
+     padding: 1vw 1vw;
+     
+     }
+     .Header .left svg{
+       height: 4vh;
+     
+     }
+     
+     
+ 
+     .Header .bottom{
+       opacity: 0;
+     
+     }
+ 
+ 
+     .Header .right h3{
+ 
+       opacity: 0;
+       
+       }
+ 
+ 
+       .Header .menuicon {
+         opacity: 1;
+         font-size: 10vw;
           
-         }
+          }
+ 
+ .sidebar {
+   position: fixed;
+   top: 0;
+   right: -100%; /* Initially hide the sidebar off-screen */
+   width: 100%;
+   height:100%;
+   background-color: #181717;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+   opacity: 0;
+   position: fixed;
+   z-index: 99999;
+ }
+ 
+ .sidebar.open {
+   right: 0; 
+   opacity: 1; 
+ }
+ 
+ .sidebar h3 {
+   color: white;
+   font-size: 3.5rem;
+   margin: 1.6rem 0;
+ 
+ 
+ }
+ .sidebar a {
+   text-decoration: none;
+   text-transform: uppercase;
+ }
+ .closeicon {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 2rem;
+   color: white;
+   cursor: pointer;
+   z-index: 9999;
+ }
+ 
+ 
+ 
 
          .Homepage{
           Width: 100%;
@@ -2764,7 +2840,8 @@ select {
     
 
     @media (min-width: 1025px) and (max-width: 1280px){
-
+      
+         
       .Header{
         height: 10vh;
         Width: 100%;
