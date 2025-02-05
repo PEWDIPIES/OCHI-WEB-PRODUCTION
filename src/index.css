@@ -1,0 +1,3134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+@font-face {
+  font-family:'FoundersGrotesk' ;
+  src: url(/src/assets/Fonts/FoundersGrotesk-Semibold.ttf);
+}
+
+
+@font-face {
+  font-family:'icomoon' ;
+  src: url(/src/assets/Fonts/icomoon.ttf);
+}
+
+
+
+@font-face {
+  font-family:'NeueMontreal' ;
+  src: url(/src/assets/Fonts/NeueMontreal-Regular.ttf);
+}
+
+
+
+@font-face {
+  font-family:'GeoplaceSCbold' ;
+  src: url(/src/assets/Fonts/GeoplaceSC-Bold.ttf);
+}
+
+@font-face {
+  font-family:'GeoplaceSCRegular' ;
+  src: url(/src/assets/Fonts/GeoplaceSC-Regular.ttf);
+}
+
+@font-face {
+  font-family:'FaqroExtendedWideTrial' ;
+  src: url(/src/assets/Fonts/FaqroExtendedWideTrial-Regular.ttf);
+}
+
+@font-face {
+  font-family:'Valention' ;
+  src: url(/src/assets/Fonts/Valention-4nYRx.otf);
+}
+
+
+.Loader{
+  height:  100vh;
+  width:  100%;
+  position: absolute;
+  z-index: 99999999999;
+  background-color: rgb(18, 18, 18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  
+}
+.Loader h1{
+font-size: 4vw;
+text-transform: uppercase;
+color: white;
+font-family: GeoplaceSCRegular;
+text-align: center;
+font-weight: 500;
+  
+}
+html,body{
+  height: 100%;
+  width:  100%;
+  
+
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+.Main{
+ height: 100vh;
+ width:  100%;
+ background-color: #F1F1F1;
+
+}
+
+.Header{
+  height: 10vh;
+  Width: 100%;
+  padding: 0 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.Header .left{
+padding: 1vw 2vw;
+border-radius: 2vw;
+
+}
+.Header .left svg{
+  height: 9vh;
+  color: rgb(28, 28, 28);
+
+}
+
+.Header .bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+
+}
+.Header .bottom h4{
+
+font-family: NeueMontreal;
+font-weight: 500;
+font-size: 1.1vw;
+
+}
+.Header .bottom a{
+  color: rgb(34, 33, 33);
+  text-decoration: none;
+  
+  }
+.Header .right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+
+
+}
+.Header .right h3{
+
+font-family: NeueMontreal;
+font-weight: 500;
+font-size: 1.2vw;
+color: black;
+
+}
+.Header .right a{
+  color: rgb(34, 33, 33);
+
+  text-decoration: none;
+  
+  }
+
+  .Header .menuicon {
+   opacity: 0;
+    
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      opacity: 0  ;
+      right: -100%; /* Initially hide the sidebar off-screen */
+      width: 60%;
+      height: 100%;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s ease-in-out; /* Smooth transition */
+    }
+    .sidebar.open {
+      right: 0; /* When the menu is open, move sidebar into view */
+      opacity: 0;
+    }
+
+    .closeicon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      opacity: 0;
+    }
+    
+  .Homepage{
+    height: 100vh;
+    Width: 100%;
+    margin-top: 4vw;
+
+  }
+
+  .Landingpage{
+    height: 85vh;
+    Width: 100%;
+    padding: 0 3vw;
+
+  }
+
+  .Landingpageupper{
+    height: 52vh;
+    Width: 100%;
+    margin-bottom: 7vw;
+
+    
+  }
+
+  .Landingpageupper h1{
+  font-family: FoundersGrotesk;
+  font-weight: 500;
+  font-size: 10vw;
+  line-height: 2.3vw;
+  text-transform: uppercase;
+  color: rgb(30, 29, 29);
+  }
+
+
+
+  .Landingpagebottom .connect{
+    height: 7vh;
+    Width: 100%;
+    border-top: 1px solid rgb(42, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .Landingpagebottom h3{
+
+    font-family: NeueMontreal;
+    font-weight: 500;
+    font-size: 1.2vw;
+    color: black;
+    
+    }
+
+    .Landingpagebottom .connect button{
+     padding: 0.7vw 1.6vw;
+     font-size: 1vw;
+     background: none;
+     border-radius: 2vw;
+     border: 1px solid rgb(44, 43, 43);
+    font-family: NeueMontreal;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all ease 1s;
+    cursor: pointer;
+
+  
+    }
+  
+    .Landingpagebottom .connect button:hover{
+      background-color: rgb(29, 28, 28);
+      color: white;
+ 
+   
+     }
+   
+
+     .Marquee {
+      height: 70vh;
+      width: 100%;
+      background-color: #004D43;
+      overflow: hidden;
+      white-space: nowrap;
+      display: flex;
+      justify-content: flex-start;
+    }
+    
+    .Marquee h3 {
+      font-family: FoundersGrotesk;
+      font-size: 30vw;
+      color: rgb(232, 230, 230);
+      text-transform: uppercase;
+      margin-right: 2vw; /* Space between the texts */
+      white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+    }
+    
+    .HomeAbout{
+      width: 100%;
+      background-color: #CDEA68;
+      margin-bottom: 7vw;
+
+    }
+
+    .HomeAbouttop{
+      width: 80%;
+      padding: 6vw 1vw;
+      margin: 0 4vw ;
+      margin-bottom: 1vw;
+
+    }
+
+    .HomeAbouttop h5{
+      font-family:NeueMontreal ;
+      font-weight: 500;
+      font-size:3.5vw;
+      color: rgb(26, 25, 25);
+      line-height: 4vw;
+
+    }
+
+
+
+    .HomeAboutbottom{
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      color: rgb(84, 83, 83);
+      padding: 1vw 2vw;
+      margin-bottom: 3vw;
+      border-top: 1px solid rgb(56, 55, 55);
+      font-family: NeueMontreal;
+    }
+
+    .HomeAboutbottomleft{
+      height: 100%;
+      width: 50%;
+    }
+
+    .HomeAboutbottomleft h2{
+      font-weight: 500;
+      font-size: 1.6vw;
+
+    }
+
+    .HomeAboutbottomright{
+      height: 100%;
+      width:37%;
+      
+    }
+
+    .HomeAboutbottomright h4{
+      font-size: 1.5vw;
+      padding: 0 5vw;
+      margin: 2vw 0;
+      font-weight: 500;
+    }
+
+    .HomeAboutend{
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      color: rgb(37, 37, 37);
+      padding: 1vw 2vw;
+      border-top: 1px solid rgb(56, 55, 55);
+      font-family: NeueMontreal;
+
+    }
+
+    .HomeAboutendleft{
+      height: 100%;
+      width: 20%;
+
+    }
+
+    .HomeAboutendleft h2{
+      font-size: 3vw;
+      font-weight: 500;
+      margin-bottom: 1vw;
+
+      
+    }
+
+
+    .HomeAboutendleft  button{
+      padding: 1.2vw 2.5vw;
+      font-size: 1.2vw;
+      border-radius: 2vw;
+      border: 1px solid rgb(44, 43, 43);
+     font-family: NeueMontreal;
+     text-transform: uppercase;
+     font-weight: 500;
+     transition: all ease 1s;
+     cursor: pointer;
+     background-color: rgb(28, 28, 28);
+     color: white;
+ 
+     }
+   
+
+
+    .HomeAboutendright{
+
+      height: 73vh;
+      width: 50%;
+      overflow: hidden;
+    }
+
+
+
+    .HomeAboutendright img{
+      object-fit: cover;
+      object-position: center;
+
+    }
+
+
+    .Eyesbackground{
+      width: 100%;
+      position: relative;
+      margin-bottom: 7vw;
+
+    }
+
+    .video-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); 
+      width: 80%; 
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; 
+    }
+    
+    .video-container video {
+      height: 100%; 
+      width: 100%;
+    }
+    
+
+    .image {
+      height: 90vh; /* 90% of the viewport height */
+      width: 90%;   /* 90% of the container width */
+      overflow: hidden; /* Ensure content is clipped */
+      margin: 0 auto;  /* Center the image container horizontally */
+    }
+    
+    .image img {
+      height: 100%; /* Make image fill the container height */
+      width: 100%;  /* Make image fill the container width */
+      object-fit: cover; /* Ensure the image covers the container without distorting */
+      object-position: center; /* Crop the image from the center */
+    }
+    
+    .backgroundEyes {
+      height: 50vh; 
+      width: 62%;  
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      gap: 5vw; 
+      
+    }
+    
+
+    .circle{
+      background-color: white;
+      border-radius: 50%;
+      padding: 3.2vw 3.5vw;
+     
+    }
+
+    .innercircle{
+      background-color: rgb(44, 43, 43);
+      padding: 2vw 3vw;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .innercircle h2{
+     
+      font-family: NeueMontreal;
+      font-weight: 500;
+      color: white;
+      font-size: 1.4vw;
+
+    }
+
+    .Featuredproject{
+      width: 100%;
+      padding: 1vw 2vw;
+
+    }   
+     .Featuredproject h1{
+      font-family:NeueMontreal ;
+      font-weight: 500;
+      font-size: 3.5vw;
+      color: #212121;
+
+    }
+
+    .Featuredcards{
+      width: 100%;
+      margin-top: 3vw;
+      border-top: 1px solid black;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cards{
+      width: 50%;
+      overflow: hidden;
+      padding: 0 1vw;
+      
+    }
+
+
+    
+    .cardsimg{
+      height: 76vh;
+      width: 100%;
+      background-color: rgb(232, 230, 230);
+      margin-bottom: 1.7vw;
+    }
+
+    .cardsimg img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: all ease 1s;
+    }
+
+    .cardsimg img:hover{
+     scale: 1;
+    }
+    .cards h2{
+     margin-bottom: 2vw;
+     font-family: NeueMontreal;
+     font-weight: 500;
+     font-size: 1.5vw;
+    }
+
+    .cardsbtn{
+      display: flex;
+      align-items: flex-start;
+      justify-content: left;
+      margin: 0 1vw;
+      gap: 2vw;
+      margin-top: 1vw;
+      margin: 2.5vw 0;
+    }
+
+    button{
+      padding: 0.8vw 2vw;
+      background: none;
+      border-radius: 4vw;
+      font-family:NeueMontreal ;
+      font-size: 1vw;
+      font-weight: 500;
+      transition: all ease-in-out 0.4s;
+      cursor: pointer;
+      border: 1px solid rgb(103, 102, 101);
+    }
+
+
+    button:hover{
+    background-color: rgb(32, 31, 31);
+    color: white;
+    }
+
+
+    .Featuredbutton{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 7vh;
+    }
+
+
+    .ClientReview{
+      width: 100%;
+      padding: 0 2vw;
+      margin-top: 3vw;
+    }
+
+    .ClientReview h1{
+      font-family:NeueMontreal ;
+      font-size: 4vw;
+      font-weight: 500;
+      }
+
+      .Ourclient{
+        width: 100%;
+        margin-top: 3vw;
+      }
+
+      .clients{
+        display: flex;
+        align-items: flex-start; /* Left align the items */
+        justify-content: space-between;
+        padding: 0 2vw;
+        border-top: 1px solid rgb(35, 34, 34);
+        
+      }
+
+      .clients h1,h2,h3{
+      font-family: NeueMontreal;
+      font-weight: 500;
+      font-size: 1.2vw;
+      margin: 1.6vw 0;
+color: rgb(48, 47, 47);
+text-align: center;
+
+      }
+
+  
+
+      .Clientcards{
+        height: 60vh;
+        width: 100%;
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+        padding: 0 2vw  ;
+      }
+
+
+      .threcards{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .cardleft{
+        height: 100%;
+        width: 44%;
+        background-color: #004D43;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .cardleft img{
+        height: 10vh;
+        object-fit: cover;
+        object-position: center;
+
+      }
+      .cardbottom{
+        height: 100%;
+        width: 27%;
+        background-color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .cardbottom img{
+        height: 15vh;
+        object-fit: cover;
+        object-position: center;
+
+      }
+      .cardright{
+        height: 100%;
+        width: 27%;
+          background-color:#212121;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+          .cardright img{
+        height: 25vh;
+        object-fit: cover;
+        object-position: center;
+
+      }
+
+      .Readyproject {
+        height: 100vh;
+        width: 100%;
+        background-color: #CDEA68;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        position: relative; flex-direction: column;
+        margin-bottom: 4vw;
+        padding: 0 3vw;
+      }
+      
+   .Readytext{
+    padding:  1vw 1vw;
+   }
+      
+      .Readytext h2 {
+        font-family: FoundersGrotesk;
+        font-weight: 500;
+        font-size: 16vw;
+        line-height: 12vw;
+        text-transform: uppercase;
+        text-align: center; /* Center text */
+        margin: 0;
+      }
+ 
+.footer
+  {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    color: #212121;
+    text-align: center;
+    
+  }
+  .footer a
+  {
+     text-decoration: none;
+    color: #212121;
+    
+  }
+
+  .footerleft{
+    height: 60vh;
+    width: 70%;
+ 
+
+  }
+
+  .footerleft h1{
+    font-family: FoundersGrotesk;
+    font-weight: 500;
+    font-size:9vw;
+    text-transform: uppercase;
+  }
+  .footerright{
+    height: 60vh;
+    width: 70%;
+     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+  }
+  .footerright h1{
+    font-family: FoundersGrotesk;
+    font-size: 9vw;
+    text-transform: uppercase;
+  color: #212121;
+
+  }
+
+  .footerright .social-links h6{
+    font-family: NeueMontreal;
+  font-size: 1.3vw;
+  line-height: 2vw;
+  font-weight: 500;
+  text-align: center;
+  }
+
+  .addresses{
+   margin-top: 2vw;
+   text-align: center;
+  }
+  .footerright .addresses  h6{
+    font-family: NeueMontreal;
+  font-size: 1.3vw;
+  font-weight: 500;
+  text-align: center;
+  }
+
+  .email{
+    margin-top: 2vw;
+    text-align: center;
+   }
+
+   .footerright .email  h6{
+     font-family: NeueMontreal;
+   font-size: 1.3vw;
+   font-weight: 500;  
+   text-align: center;
+   }
+
+
+   .Services{
+    width: 100%;
+    margin-top: 6vw;
+    
+   }
+
+
+   .ServicesLandingpage{
+    width: 100%;
+    padding: 0 3vw;
+    margin-bottom: 4vw;
+   }
+
+
+   .Serviceslandingtop{
+    height: 61vh;
+    width: 100%;
+   }
+
+      .Serviceslandingtop h1{
+        font-family: FoundersGrotesk;
+        font-size: 10vw;
+        text-transform: uppercase;
+        color: #292828;
+
+   }
+
+   
+   .Serviceslandingtop p{
+      font-size: 3.3vw;
+      width: 70vw;
+      font-family: NeueMontreal;
+      font-weight: 500;  
+      margin-top: 3vw;
+      color: #292828;
+}
+
+.Serviceslandingbottom{
+  height: 63vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vw;
+  border-top: 1px solid rgb(87, 86, 86);
+  color: #292828;
+  padding: 0 2vw;
+ }
+
+ .bottomleft{
+  height: 100%;
+  width: 35%;
+ }
+
+ .bottomleft h1{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.2vw;
+ }
+ .bottomcenter{
+  height: 100%;
+  width: 32%;
+  padding: 0 2vw;
+
+ }
+ .bottomcenter h6{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+  margin: 1.5vw 0;
+ }
+
+ .bottomcenter h5{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.1vw;
+ }
+ .bottomright{
+  height: 100%;
+  width: 32%;
+  padding: 0 2vw;
+ }
+
+ .bottomright h6{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.1vw;
+  margin-bottom: 1vw;
+  margin: 1.5vw 0;
+ }
+
+ .bottomright h5{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.1vw;
+
+ }
+
+
+ 
+.Hoslticprocess{
+  width: 100%;
+  padding: 0 2vw;
+  color: #292828;
+  margin-bottom: 4vw;
+ }
+
+ 
+ 
+.Hoslticprocess h1{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 4vw;
+ }
+
+ .Hoslitcclient {
+  height: 45vh;
+  width: 100%;
+  padding: 0 2vw;
+  color: #292828;
+  margin-top: 4vw;
+  display: flex;
+  align-items: flex-start; /* Left align the items */
+  justify-content: space-between;
+  padding: 0 2vw;
+  border-top: 1px solid rgb(51, 50, 50);
+  border-top: 1px solid rgb(51, 50, 50);
+}
+
+.Hoslitcclient h1,
+.Hoslitcclient h2,
+.Hoslitcclient h3 {
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  margin: 1.6vw 0;
+  color: rgb(48, 47, 47);
+  margin: 3vw 0;
+  text-align: center;
+  border-top: 1px solid rgb(35, 34, 34); /* Added border to each h1, h2, h3 */
+  padding-top: 1vw; /* Optional: Adjust space between text and border */
+}
+
+
+
+.SerivcesClientRewview{
+  padding: 0 2vw;
+}
+
+
+.SerivcesClientRewview h4{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 4vw;
+  color: #292828;
+  margin-bottom: 5vw ;
+}
+
+.Servicesmarqueeandcards{
+  height: 100vh;
+  width: 100%;
+  margin-top: 5vw;
+}
+
+
+
+.Servicesmarqueecards {
+  width: 100%;
+  background-color: #004D43  ;
+margin-top: 6vw;
+}
+
+
+
+
+.Servicescards {
+  height: 100vh;
+  width: 60%;
+  margin-left: auto; 
+  margin-right: 0; 
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 2vw;
+
+}
+
+.Servicescard{
+  height: 31vh;
+  width: 38%;
+  background-color: #145B52;
+  border-radius: 1vw;
+  position: relative;
+  overflow: hidden;
+  padding: 1vw 1vw;
+  color:white;
+
+
+}
+
+.Servicescard h1{
+  font-family: NeueMontreal;
+  font-weight: 500;
+  font-size: 2vw;
+  margin-bottom: 5vw ;
+}
+
+.servicescardinnerbottom {
+  height: 10vh;
+  width: 100%;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1vw;
+  font-family: NeueMontreal;
+
+}
+
+.servicescardinnerbottom h2,h3{
+color: white;
+
+}
+
+.Ourwork{
+  width: 100%;
+  margin-top: 3vw;  
+  background-color: #EAEAEA;
+}
+
+.Ourworklanding{
+  height: 70vh;
+  width: 100%;
+  background-color: #CDEA68;
+  padding: 0 3vw;
+  overflow: hidden;
+  margin-bottom: 11vw;
+}
+
+
+.Ourworklanding h1 {
+  font-family: FoundersGrotesk;
+  font-size: 12vw;
+  color: rgb(232, 230, 230);
+  text-transform: uppercase;
+  color: #292828;
+}
+
+
+
+.Ourworkheading{
+  width: 100%;
+  padding: 0 2vw;
+}
+.Ourworkheading h1{
+  font-family: NeueMontreal;
+  font-size: 3.5vw;
+  color: #292828;
+  line-height: 4vw;
+  font-weight: 500;
+  margin-bottom: 6vw;
+
+}
+
+
+.Ourworkmaruqueeandcards{
+  width: 100%;
+  background-color: #004D43;
+  margin-top: 8vw;
+  margin-bottom: 2vw;
+}
+
+.Ourworkcards {
+  height: 60vh;
+  width: 68%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid rgb(240, 239, 239);
+  
+  margin-left: auto; 
+  margin-right: 0;   
+}
+
+
+.Ourworkcard{
+  height: 50vh;
+  width: 35%;
+  margin: 0 2vw;
+  overflow: hidden;
+}
+.ourworkimage {
+  height: 43vh;
+  background-color: #004D43;
+  width: 100%;
+  overflow: hidden; /* Prevents overflow when zoomed */
+}
+
+.ourworkimage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all ease 1s; /* Smooth zoom transition */
+}
+
+.ourworkimage img:hover {
+  transform: scale(1.1); /* Zoom in the image */
+}
+
+
+.Ourworkcard h6{
+
+  font-family: NeueMontreal;
+  font-size: 1.3vw;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-top: 1vw;
+}
+
+
+.AboutAboutus{
+  height: 100vh;
+  width: 100%;
+  margin-top: 6vw;
+}
+
+.Aboutuslanding{
+  height: 40vh;
+  width: 100%;
+  padding: 0 3vw;
+}
+
+.Aboutuslanding h1{
+  font-family: FoundersGrotesk;
+  font-size: 9vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 7vw;
+  color: #212121;
+}
+.Aboutuslanding img{
+  height: 13vh;
+  margin: 0 1vw;
+  border-radius: 1vw;
+  
+}
+
+
+
+.Aboutusgroup{
+  height: 110vh;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 7vw;
+}
+
+.Aboutusgroup img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.AboutusMarqueeandteam{
+  width: 100%;
+  background-color: #004D43;
+
+}
+
+
+.Aboutteam{
+  height: 60vh;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+
+
+.swiper {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+.Aboutprinciples{
+  width: 100%;
+  margin-top: 8vw;
+  padding: 0 2vw;
+  margin-bottom: 15vw;
+}
+.Aboutprinciples h1{
+  font-family: NeueMontreal;
+  font-size: 3.2vw;
+  font-weight: 500;
+
+}
+
+.Aboutprinciplecard{
+  width: 100%;
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Aboutcard{
+  height: 100%;
+  width: 50%;
+  
+}
+
+.Aboutimage{
+  height: 85vh;
+  width: 95%;
+
+}
+
+.Aboutimage img{
+  height: 100%;
+  width: 100%;
+
+}
+
+.Aboutcard h5{
+  font-family: NeueMontreal;
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-top: 1vw;
+  width: 35vw;
+
+  
+}
+
+.Contact{
+  height: 100vh;
+  width: 100%;
+  margin-top: 10vw;
+  background-color: #F1F1F1;
+
+}
+
+.Contactform{
+  height: 100vh;
+  width: 100%;
+  margin-top: 6vw;
+  padding: 0 3vw ;
+  margin-bottom: 10vw;
+
+}
+.Contactform h1{
+  font-family: NeueMontreal;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+.Form{
+  margin-top: 7vw;
+  width: 100%;
+
+
+}
+
+.Form h4{
+  font-family: NeueMontreal;
+  font-size: 3.8vw;
+  font-weight: 500;
+  color: #212121;
+
+}
+
+
+.Form input{
+  background: none;
+  padding: 1vw 3vw;
+  border: none;
+  margin: 1vw 1vw;
+  font-size: 1.3vw;
+  border-radius: 2vw;
+
+}
+
+.Form button{
+  margin-top: 2vw;
+  padding: 1vw 3vw;
+  font-size: 1.4vw;
+}
+
+.Form button:hover{
+background-color: #212121;
+font-family: NeueMontreal;
+
+
+}
+
+
+select {
+  background: none;
+  border: none; /* black border */
+  border-radius: 1vw; /* border radius of 1vw */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+}
+
+select:focus {
+  border-color: #007BFF;
+}
+
+
+@media (max-width: 768px) {
+
+  .Loader h1{
+    font-size: 10vw;
+    text-transform: uppercase;
+    color: white;
+    font-family: GeoplaceSCRegular;
+    text-align: center;
+    font-weight: 500;
+      
+    }
+
+  .Header{
+ opacity: 1;
+   
+  }
+
+  .Header .left{
+    padding: 1vw 1vw;
+    
+    }
+    .Header .left svg{
+      height: 4vh;
+    
+    }
+    
+    
+
+    .Header .bottom{
+      opacity: 0;
+    
+    }
+
+
+    .Header .right h3{
+
+      opacity: 0;
+      
+      }
+
+
+      .Header .menuicon {
+        opacity: 1;
+        font-size: 10vw;
+         
+         }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hide the sidebar off-screen */
+  width: 100%;
+  height:90%;
+  background-color: #181717;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  opacity: 0;
+  position: fixed;
+  z-index: 99999;
+}
+
+.sidebar.open {
+  right: 0; 
+  opacity: 1; 
+}
+
+.sidebar h3 {
+  color: white;
+  font-size: 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+
+  font-family: GeoplaceSCRegular;
+
+}
+.sidebar a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.closeicon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.Homepage{
+  height: 100vh;
+  Width: 100%;
+  margin-top: 0vw;
+
+}
+  .Landingpage{
+    height: 60vh;
+    Width: 100%;
+
+  }
+
+  .Landingpageupper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 31vh;
+    margin-bottom: 7vw;
+
+    
+  }
+  
+  .Landingpageupper h1{
+    font-size: 21vw;
+    text-align: center;
+    line-height: 5.1vw;
+    }
+    .Landingpagebottom .connect{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 19vh;
+  
+    }
+    .Landingpagebottom h3{
+      font-size: 4.5vw;
+      }
+
+      .Landingpagebottom .connect button{
+        padding: 2vw 5vw;
+        font-size: 2.8vw;
+        background: none;
+        border-radius: 4vw;
+       margin-top: 4vw;
+   
+     
+       }
+
+       .Marquee {
+        height: 32vh;
+        width: 100%;
+      }
+      .Marquee h3 {
+        font-size: 40vw;
+        margin-right: 1vw; 
+      }
+        
+    .HomeAbout{
+      width: 100%;
+      margin-bottom: 1vw;
+      display: flex ;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+    }
+    
+    .HomeAbouttop{
+      width: 100%;
+      padding: 2vw 2vw;
+      margin-bottom:4vw;
+
+    }
+    .HomeAbouttop h5{
+      font-size:5vw;
+      text-align: center;
+      line-height: 5.5vw;
+      
+
+    }
+
+    .HomeAboutbottom{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 4vw;
+
+
+    }
+
+    .HomeAboutbottomleft{
+      width: 100%;
+      margin-bottom: 5vw;
+    }
+    
+    .HomeAboutbottomleft h2{
+      font-size: 5.5vw;
+
+    }
+    .HomeAboutbottomright{
+      width: 100%;
+    }
+    
+    .HomeAboutbottomright h4{
+      font-size: 5.3vw;
+      text-align: center;
+
+    }
+    .HomeAboutend{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+
+    }
+    
+    .HomeAboutendleft{
+      width: 100%;
+      display: flex ;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 9vw;
+
+    }
+    .HomeAboutendleft h2{
+      font-size: 8vw;
+      font-weight: 500;
+      margin-bottom: 5vw;
+
+      
+    }
+    .HomeAboutendleft  button{
+      padding: 2.5vw 5vw;
+      font-size: 3vw;
+ 
+     }
+
+     
+    .HomeAboutendright{
+
+      height: 50vh;
+      width: 100%;
+    }
+
+   
+    .Eyesbackground{
+      width: 100%;
+      position: relative;
+      margin-bottom: 10vw;
+
+    }
+    .image {
+      height: 70vh;
+      width: 100%;  
+      overflow: hidden; 
+      margin: 0 auto;  
+    }
+
+    .backgroundEyes {
+      height: 30vh; 
+      width: 100%;
+      position: absolute;
+   
+   
+      
+    }
+    
+    .circle{
+      padding: 7vw 7vw;
+     
+    }
+    .innercircle{
+      padding:7vw 8vw;
+
+    }
+    .innercircle h2{
+     
+      font-size: 4vw;
+
+    }
+    .video-container {
+      top: 10vh;
+      left: 50%;
+      width: 100%; 
+      height: 70%;
+
+    }
+    
+    .Featuredproject{
+      width: 100%;
+      padding: 1vw 2vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+    }   
+    .Featuredproject h1{
+      font-size: 7vw;
+      margin-bottom: 5vw;
+
+    }
+
+    .Featuredcards{
+      width: 100%;
+      margin-top: 3vw;
+      border-top: 1px solid black;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .cards{
+      width: 100%;
+      overflow: hidden;
+      padding: 0 1vw;
+      margin: 4vw 0;
+      
+    }
+
+    
+    .cardsimg{
+      height: 47vh;
+      margin-bottom: 6vw;
+    }
+
+    .cards h2{
+      margin-bottom: 5vw;
+      font-size: 6vw;
+     }
+     .cardsbtn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5vw;
+      margin-top: 2vw;
+    }
+
+
+     button{
+      padding: 2vw 3vw;
+      font-size: 2.8vw;
+    }
+
+
+    .ClientReview{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      flex-direction: column;
+      margin-top: 13vw;
+    }
+    .ClientReview h1{
+      font-size: 7vw;
+      margin-bottom: 3vw;
+      }
+      .Ourclient{
+        margin-bottom: 5vw;
+      }
+      .clients h1,h2,h3{
+        font-size: 2.8vw;
+        margin: 2.5vw 0;
+        color: #212121;
+  
+        }
+
+
+        .Clientcards{
+          height: 140vh;
+          width: 100%;
+          margin-top: 9vw;
+          margin-bottom: 4vw;
+        }
+    
+          .threcards{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+          flex-direction: column;
+        }
+        .cardleft{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 2vw 0;
+  
+        }
+        .cardleft img{
+          height: 9vh;
+          object-fit: cover;
+          object-position: center;
+  
+        }
+        
+      .cardbottom{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2vw 0;
+
+        
+
+      }
+      .cardbottom img{
+        height: 12vh;
+
+      }
+
+      .cardright{
+        height: 100%;
+        width: 100%;
+        background-color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+      .cardright img{
+        height: 12vh;
+
+      }
+
+      
+      .Readyproject {
+        height: 70vh;
+        margin-bottom: 13vw;
+        padding: 0 2vw;
+        width: 95%;
+      }
+      .Readytext{
+        padding:  1vw 2vw;
+       }
+       .Readytext h2 {
+        font-size: 29vw;
+        line-height: 21vw;
+      }
+      .footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+  }
+  
+  .footerleft{
+    height: 12vh;
+    width: 100%;
+ 
+
+  }
+  .footerleft h1{
+    font-size:20vw;
+  }
+  .footerright{
+    height: 40vh;
+    width: 100%;
+     display: flex;
+    align-items: 
+    center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  .footerright h1{
+    font-size:20vw;
+  }
+  .footerright .social-links h6{
+  font-size: 5vw;
+  line-height: 6vw;
+  }
+  
+  .addresses{
+    margin-top: 5vw;
+    text-align: center;
+   }
+   .footerright .addresses  h6{
+  font-size: 5vw;
+  text-align: center;
+  }
+
+  
+  .email{
+    margin-top: 3vw;
+   }
+   .footerright .email  h6{
+   font-size: 5vw;
+   font-weight: 500; 
+   }
+
+   .Services{
+    width: 100%;
+    margin-top: 1vw;
+    
+   }
+
+   .ServicesLandingpage{
+    width: 100%;
+    padding: 0 3vw;
+    margin-bottom: 10vw;
+   }
+
+   .Serviceslandingtop{
+    height: 31vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+   .Serviceslandingtop h1{
+    font-size: 24vw;
+
+}
+
+.Serviceslandingtop p{
+  font-size: 4vw;
+  text-align: center;
+  width: 70vw;
+  margin-top: 5vw;
+}
+
+.Serviceslandingbottom{
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3vw;
+ }
+ .bottomleft{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5vw;
+ }
+
+ .bottomleft h1{
+  font-size: 7vw;
+  text-align: center;
+  
+ }
+ .bottomcenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+ }
+ .bottomcenter h6{
+  text-align: center;
+  font-size: 8vw;
+  margin-bottom: 8vw;
+ }
+
+ .bottomcenter h5{
+  font-size: 4.5vw;
+  text-align: center;
+ }
+
+ .bottomright{
+
+  height: 100%;
+  width: 100%;
+ }
+ .bottomright h6{
+  font-weight: 500;
+  font-size: 7vw;
+  margin-bottom: 2vw;
+  margin: 1.5vw 0;
+  text-align: center;
+ }
+ .bottomright h5{
+  font-size: 4vw;
+  text-align: center;
+
+ }
+
+.Hoslticprocess{
+  width: 100%;
+  margin-bottom: 6vw;
+ }
+ .Hoslticprocess h1{
+  font-size: 8vw;
+  text-align: center;
+  margin-bottom: 10vw;
+ }
+ .Hoslitcclient {
+  height: 105vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  flex-direction: column;
+}
+.Hoslitcclient h1,
+.Hoslitcclient h2,
+.Hoslitcclient h3 {
+  font-size:7vw;
+  margin: 3vw 0;
+  text-align: center;
+  padding-top: 1vw;
+}
+
+.SerivcesClientRewview{
+  padding: 0 2vw;
+  margin-top: 8vw;
+  margin-bottom: 10vw;
+}
+
+.SerivcesClientRewview h4{
+  font-size: 10vw;
+  text-align: center;
+  margin-bottom: 9vw ;
+}
+
+
+.Servicesmarqueeandcards{
+  height: 100vh;
+  width: 100%;
+  margin-top: 1vw;
+}
+
+.Servicesmarqueecards {
+  width: 100%;
+  background-color: #004D43  ;
+margin-top: 6vw;
+margin-bottom: 10vw;
+}
+
+.Servicescards {
+  height: 100vh;
+  width: 100%;
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 4vw;
+
+
+}
+.Servicescard{
+  height: 27vh;
+  width: 46%;
+
+
+}
+
+.Servicescard h1{
+  font-size: 7vw;
+  text-align: center;
+}
+.servicescardinnerbottom h2,h3{
+  color: white;
+  font-size: 3vw;
+  
+  }
+
+
+  .Ourwork{
+    width: 100%;
+    margin-top: 1vw; 
+  }
+  
+
+.Ourworklanding{
+  height: 50vh;
+  width: 100%;
+  background-color: #CDEA68;
+  padding: 0 3vw;
+  overflow: hidden;
+  margin-bottom: 12vw;
+
+}
+
+.Ourworklanding h1 {
+  font-size: 24vw;
+  text-align: center;
+}
+
+.Ourworkheading{
+  width: 100%;
+}
+.Ourworkheading h1{
+  font-size: 5vw;
+  line-height: 7vw;
+  margin-bottom: 10vw;
+  text-align: center;
+
+}
+
+
+.Ourworkmaruqueeandcards{
+  width: 100%;
+  background-color: #004D43;
+  margin-top: 7vw;
+  margin-bottom: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Ourworkcards {
+  height: 148vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+
+
+.Ourworkcard{
+  height: 65vh;
+  width: 99%;
+  margin: 2vw 0;
+  overflow: hidden;
+
+}
+
+
+.ourworkimage {
+  height: 39vh;
+  background-color: #004D43;
+  width: 100%;
+  overflow: hidden; 
+}
+
+.Ourworkcard h6{
+
+  font-size: 6vw;
+  margin-top: 5vw;
+}
+
+
+
+.AboutAboutus{
+  width: 100%;
+  margin-top: 0;
+}
+.Aboutuslanding{
+  height: 28vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Aboutuslanding h1{
+  font-size: 17vw;
+  line-height: 14vw;
+}
+.Aboutuslanding img{
+  height: 6vh;
+  
+}
+
+
+.Aboutusgroup{
+  height: 35vh;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10vw;
+}
+
+.Aboutusgroup{
+  height:35vh;
+  width: 90%;
+  margin-bottom: 6vw;
+}
+
+
+
+.Aboutteam{
+  height: 49vh;
+  width: 100%;
+  margin-top: 1vw;
+}
+
+.Aboutprinciples{
+  width: 100%;
+  margin-top: 8vw;
+  margin-bottom: 10vw;
+}
+.Aboutprinciples h1{
+  font-size: 6vw;
+  text-align: center;
+  margin-bottom: 6vw;
+
+}
+
+.Aboutprinciplecard{
+  width: 100%;
+  margin-top: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Aboutcard{
+  height: 100%;
+  width: 100%;
+  margin: 3vw 0;
+  
+}
+.Aboutimage{
+  height: 45vh;
+  width: 100%;
+  margin-top: 2vw;
+
+}
+.Aboutcard h5{
+  font-size: 4vw;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1vw;
+  width: 100%;
+
+  
+}
+
+.Contact{
+  height: 184vh;
+  width: 100%;
+  margin-top: 1vw;
+
+}
+
+.Contactform{
+  height: 150vh;
+  width: 100%;
+  margin-top: 6vw;
+  padding: 0 3vw ;
+  margin-bottom: 5vw;
+
+}
+
+.Contactform h1{
+  font-size: 10vw;
+  text-align: center;
+}
+.Form{
+  margin-top: 8vw;
+
+
+}
+.Form h4{
+  font-size: 9vw;
+  text-align: center;
+  
+
+}
+.Form input{
+  padding: 4vw 3vw;
+  border: none;
+  margin: 4vw 17vw;
+  font-size: 4vw;
+  border-radius: 2vw;
+
+}
+select {
+  padding: 10px 4vw;
+  margin: 5vw 15vw;
+  font-size: 16px;
+}
+
+
+
+.Form button{
+  margin-top: 4vw;
+  padding: 5vw 10vw;
+  font-size: 5vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+   
+
+      .Header{
+        opacity: 0;
+          
+         }
+
+         .Homepage{
+          Width: 100%;
+      
+        }
+
+
+        .Landingpage{
+          height: 75vh;
+          Width: 100%;
+      
+        }
+      
+        .Landingpageupper{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 32vh;
+          margin-bottom: 10vw;
+      
+          
+        }
+
+        .Landingpageupper h1{
+          font-size: 15vw;
+          text-align: center;
+          line-height: 4vw;
+          }
+
+
+          .Landingpagebottom .connect{
+      
+            height: 30vh;
+        
+          }
+
+          .Landingpagebottom h3{
+            font-size: 4vw;
+            }
+      
+
+            .Landingpagebottom .connect button{
+              padding: 2.5vw 6vw;
+              font-size: 2.9vw;
+             margin-top: 3vw;
+         
+           
+             }
+
+
+             .Marquee {
+              height: 41vh;
+              width: 100%;
+            }
+
+
+            .Marquee h3 {
+              font-size: 43vw;
+              margin-right: 0; 
+            }
+              
+            .HomeAbout{
+              width: 100%;
+              margin-bottom: 1vw;
+              display: flex ;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+        
+            }
+              
+    .HomeAbouttop{
+      width: 100%;
+      padding: 2vw 1vw;
+      margin-bottom:5vw;
+
+    }
+    .HomeAbouttop h5{
+      font-size:5vw;
+      line-height: 6.5vw;
+      
+
+    }
+
+
+    .HomeAboutbottom{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 4vw;
+    }
+
+    
+    .HomeAboutbottomleft{
+      width: 100%;
+      margin-bottom: 4vw;
+    }
+    
+    .HomeAboutbottomleft h2{
+      font-size: 7vw;
+
+    }
+
+    .HomeAboutbottomright h4{
+      font-size: 5vw;
+
+    }
+
+
+
+    .HomeAboutend{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+    }
+    .HomeAboutendleft{
+      width: 100%;
+      margin-bottom: 7vw;
+
+    }
+
+    .HomeAboutendleft h2{
+      font-size: 9vw;
+      margin-bottom: 3vw;
+    }
+
+    .backgroundEyes {
+      height: 50vh; 
+      width: 100%;
+      position: absolute;
+      
+   
+      
+    }
+    .image {
+      height: 90vh;
+      width: 100%;  
+    }
+  
+    .circle{
+      padding: 5vw 5vw;
+     
+    }
+
+    .innercircle{
+      padding:5vw 6vw;
+
+    }
+    .video-container {
+      top: 9vh;
+      height: 90%;
+
+    }
+
+    .ClientReview{
+      width: 100%;
+
+      margin-top: 12vw;
+    }
+    .ClientReview h1{
+      font-size: 3.5vw;
+      margin-bottom: 3vw;
+      }
+      .Ourclient{
+        margin-bottom: 2vw;
+      }
+      .clients h1,h2,h3{
+        font-size: 3vw;
+        margin: 2.8vw 0;
+        color: #212121;
+  
+        }
+        
+
+        .Clientcards{
+          margin-top: 9vw;
+          margin-bottom: 9vw;
+        }
+
+
+       
+
+        .Readytext h2 {
+          font-size: 23vw;
+          line-height: 17vw;
+        }
+
+
+        .footer{
+          width: 100%;
+        }
+
+        .footerleft{
+          height: 14vh;
+          width: 100%;
+       
+      
+        }
+        .footerleft h1{
+          font-size:16vw;
+        }
+        .footerright{
+          height: 55vh;
+          
+        }
+
+        .footerright h1{
+          font-size:16vw;
+        }
+    
+      
+   .Services{
+    width: 100%;
+    margin-top: 2vw;
+    
+   }
+
+   .ServicesLandingpage{
+    width: 100%;
+    padding: 0 3vw;
+    margin-bottom: 14vw;
+   }
+
+   .Serviceslandingtop{
+    height: 43vh;
+    
+   }
+   .Serviceslandingtop h1{
+    font-size: 20vw;
+
+}
+
+.Serviceslandingtop p{
+  font-size: 4vw;
+  margin-top: 2vw;
+}
+
+.Serviceslandingbottom{
+  height: 110vh;
+  margin-top: 3vw;
+ }
+
+
+ .bottomleft h1{
+  font-size: 6vw;
+  
+ }
+ .bottomcenter{
+  height: 100%;
+  width: 100%;
+
+ }
+ .bottomcenter h6{
+  font-size: 7vw;
+  margin-bottom: 4vw;
+ }
+
+ .bottomcenter h5{
+  font-size: 4.5vw;
+  margin-bottom: 2vw;
+
+ }
+
+ .bottomright{
+
+  height: 100%;
+
+ }
+ .bottomright h6{
+  font-size: 6vw;
+  margin-bottom: 5vw;
+ }
+ .bottomright h5{
+  font-size: 4vw;
+
+ }
+
+.Hoslticprocess{
+  width: 100%;
+  margin-bottom: 8vw;
+ }
+ .Hoslticprocess h1{
+  font-size: 10vw;
+  text-align: center;
+  margin-bottom: 5vw;
+ }
+ .Hoslitcclient {
+  height: 125vh;
+  
+  flex-direction: column;
+}
+.Hoslitcclient h1,
+.Hoslitcclient h2,
+.Hoslitcclient h3 {
+  font-size:6vw;
+  margin: 3vw 0;
+}
+
+.SerivcesClientRewview{
+  padding: 0 2vw;
+  margin-top: 8vw;
+  margin-bottom: 10vw;
+  color: #212121;
+  text-align: center;
+}
+
+.SerivcesClientRewview h4{
+  font-size: 10vw;
+}
+
+
+.Servicesmarqueeandcards{
+  height: 100vh;
+  margin-top: 1vw;
+}
+
+.Servicesmarqueecards {
+  width: 100%;
+margin-bottom: 10vw;
+}
+
+.Servicescards {
+  margin-top: 1vw;
+  margin-bottom: 4vw;
+}
+
+.Servicescard h1{
+  font-size: 5vw;
+  text-align: center;
+}
+.servicescardinnerbottom h2,h3{
+  color: #212121;
+  font-size: 3vw;
+  }
+
+  .Ourwork{
+    width: 100%;
+    margin-top: 3vw;  
+  }
+  
+
+.Ourworklanding{
+  height: 50vh;
+  padding: 0 3vw;
+  margin-bottom: 12vw;
+
+}
+
+.Ourworklanding h1 {
+  font-size: 26vw;
+}
+
+.Ourworkheading{
+  width: 100%;
+}
+.Ourworkheading h1{
+  font-size: 4.5vw;
+  line-height: 6vw;
+  margin-bottom: 7vw;
+  text-align: center;
+
+}
+
+
+.Ourworkmaruqueeandcards{
+  width: 100%;
+  background-color: #004D43;
+  margin-top: 7vw;
+  margin-bottom: 7vw;
+}
+
+.Ourworkcards {
+  height: 198vh;
+  width: 100%;
+
+}
+
+
+.Ourworkcard{
+  height: 100vh;
+  width: 75%;
+  margin: 3vw 0;
+
+}
+
+
+.ourworkimage {
+  height: 50vh;
+  width: 100%;
+}
+
+.Ourworkcard h6{
+
+  font-size: 4.5vw;
+  margin-top: 3vw;
+}
+
+
+.AboutAboutus{
+  width: 100%;
+  margin-top: 1vw;
+}
+.Aboutuslanding{
+  height: 28vh;
+  margin-bottom: 2vw;
+}
+
+.Aboutuslanding h1{
+  font-size: 18vw;
+  line-height: 14vw;
+}
+.Aboutuslanding img{
+  height: 10vh;
+  
+}
+
+
+.Aboutusgroup{
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 14vw;
+}
+
+.Aboutusgroup{
+  height:42vh;
+  width: 100%;
+  padding: 0 2vw;
+  margin-bottom: 6vw;
+}
+
+
+
+.Aboutteam{
+  height: 40vh;
+  width: 100%;
+}
+
+.Aboutprinciples{
+  width: 100%;
+  margin-top: 8vw;
+  margin-bottom: 10vw;
+}
+.Aboutprinciples h1{
+  font-size: 6vw;
+  text-align: center;
+  margin-bottom: 6vw;
+
+}
+
+.Aboutprinciplecard{
+  width: 100%;
+  
+}
+
+.Aboutcard{
+  height: 100%;
+  width: 100%;
+  margin: 3vw 0;
+  
+}
+.Aboutimage{
+  height: 65vh;
+  width: 100%;
+
+}
+.Aboutcard h5{
+  font-size: 4vw;
+  margin-top: 5vw;
+}
+.Contact{
+  height: 170vh;
+  width: 100%;
+  margin-top: 1vw;
+
+}
+.Contactform{
+  height: 130vh;
+  margin-top: 16vw;
+  margin-bottom: 5vw;
+
+}
+   
+.Contactform h1{
+  font-size: 6vw;
+}
+
+.Form{
+  margin-top: 9vw;
+
+}
+
+.Form h4{
+  font-size: 4vw;
+
+}
+
+.Form input{
+  padding: 3vw 4vw;
+  border: none;
+  margin: 2vw 1vw;
+  font-size: 4vw;
+  border-radius: 2vw;
+
+}
+
+select {
+  padding: 10px 4vw;
+  margin: 5vw 15vw;
+  font-size: 16px;
+}
+  
+
+.Form button{
+  padding: 3vw 8vw;
+  font-size: 4vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+    }
+
+ 
+    
+
+    @media (min-width: 1025px) and (max-width: 1280px){
+
+      .Header{
+        height: 10vh;
+        Width: 100%;
+        padding: 0 1.5vw;
+      }
+      .Header .bottom h4{
+        font-size: 1.6vw;
+        }
+
+        .Header .right h3{
+
+          font-size: 1.6vw;
+          
+          }
+
+
+      .Homepage{
+        Width: 100%;
+        margin-top: 4vw;
+    
+      }
+      .Landingpage{
+        height: 70vh;
+        Width: 100%;
+    
+      }
+      .Landingpageupper{
+        height: 48vh;
+        margin-bottom: 5vw;
+    
+        
+      }
+      .Landingpageupper h1{
+        font-size: 11vw;
+        line-height: 2.6vw;
+        }
+        .Landingpagebottom .connect{
+          height: 10vh;
+          Width: 100%;
+          border-top: 1px solid rgb(42, 41, 41);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      
+        }
+        .Landingpagebottom h3{
+          font-size: 1.7vw;
+          }
+          
+    .Landingpagebottom .connect button{
+      padding: 1vw 2vw;
+      font-size: 1.2vw;
+   
+     }
+
+     .Marquee {
+      height: 63vh;
+    }
+    .Marquee h3 {
+      font-size: 32vw;
+    }
+
+    
+    .HomeAbouttop{
+      width: 80%;
+      margin: 0 4vw ;
+
+    }
+    .HomeAbouttop h5{
+      font-size:3.8vw;
+      line-height: 4vw;
+
+    }
+
+    .HomeAboutbottom{
+      width: 100%;
+      margin-bottom: 3vw;
+    }
+    .HomeAboutbottomleft{
+      height: 100%;
+      width: 50%;
+    }
+
+    .HomeAboutbottomleft h2{
+      font-size: 2.3vw;
+
+    }
+
+    .HomeAboutbottomright{
+      height: 100%;
+      width:46%;
+      
+    }
+    .HomeAboutbottomright h4{
+      font-size: 1.5vw;
+    }
+
+    .HomeAboutend{
+      width: 100%;
+
+    }
+    .HomeAboutendleft{
+      width: 30%;
+
+    }
+
+    .HomeAboutendleft h2{
+      font-size: 3vw;
+      margin-bottom: 1vw;
+      text-align: left;
+
+      
+    }
+    .HomeAboutendleft  button{
+      padding: 1.8vw 4vw;
+      font-size: 1.5vw;
+     }
+     
+    .HomeAboutendright{
+
+      height: 70vh;
+      width: 50%;
+    }
+
+    .Eyesbackground{
+      width: 100%;
+      position: relative;
+      margin-bottom: 7vw;
+      background-color: rebeccapurple;
+
+    }
+
+    
+    .image {
+      height: 90vh; 
+      width: 100%;  
+    }
+    .backgroundEyes {
+      height: 55vh; 
+      width: 69%;  
+      
+    }
+    
+    .circle{
+      padding: 5vw 5.5vw;
+     
+    }
+    .innercircle{
+      padding: 3vw 4vw;
+
+    }
+    
+    .innercircle h2{
+      font-size: 2vw;
+
+    }
+
+    .Featuredproject{
+      width: 100%;
+      padding: 1vw 2vw;
+
+    }
+    
+    .Featuredproject h1{
+      font-size: 5vw;
+
+    }
+    .Featuredcards{
+      width: 100%;
+      margin-top: 3vw;
+    }
+       
+    .cardsimg{
+      height: 60vh;
+      margin-bottom: 1.7vw;
+    }
+    .cards h2{
+      margin-bottom: 2vw;
+      font-size: 2.7vw;
+     }
+     button{
+      padding: 1.3vw 2.3vw;
+      font-size: 1.1vw;
+    }
+
+    .ClientReview{
+      width: 100%;
+      padding: 0 2vw;
+      margin-top: 3vw;
+    }
+
+    .ClientReview h1{
+      font-family:NeueMontreal ;
+      font-size: 3.2vw;
+      font-weight: 500;
+      }
+   
+      .clients h1,h2,h3{
+        font-size: 1.6vw;
+        color: #212121;
+  
+        }
+        .Readytext h2 {
+          font-size: 17vw;
+          line-height: 13vw;
+        }
+
+
+.footerleft h1{
+  font-size:10vw;
+}
+
+.footerright h1{
+  font-size: 10vw;
+
+}
+.footerright .social-links h6{
+font-size: 2vw;
+line-height: 2.4vw;
+}
+.footerright .addresses  h6{
+font-size: 2vw;
+}
+   .footerright .email  h6{
+   font-size: 2.3vw;
+   }
+
+   
+
+   .Services{
+    margin-top: 4vw;
+    
+   }
+   
+   .ServicesLandingpage{
+    width: 100%;
+    padding: 0 3vw;
+    margin-bottom: 4vw;
+   }
+   .Serviceslandingtop{
+    height: 58vh;
+    margin-bottom: 5vw;
+   }
+   .Serviceslandingtop h1{
+    font-size: 11vw;
+
+}
+
+.Serviceslandingtop p{
+  font-size: 3.7vw;
+  width: 65vw;
+}
+
+.Serviceslandingbottom{
+  height: 63vh;
+  width: 100%;
+  margin-top: 2vw;
+ }
+ .bottomleft h1{
+  font-size: 2.2vw;
+ }
+ .bottomcenter h6{
+  font-size: 2.5vw;
+  margin-bottom: 3vw;
+ }
+ .bottomcenter h5{
+  font-size: 1.5vw;
+ }
+ 
+ .bottomright h6{
+  font-size: 2vw;
+ }
+
+ .bottomright h5{
+  font-size: 1.5vw;
+
+ }
+
+
+.Hoslticprocess{
+  width: 100%;
+  padding: 0 2vw;
+  color: #292828;
+  margin-bottom: 4vw;
+ }
+ 
+.Hoslticprocess h1{
+  font-size: 4vw;
+ }
+ .Hoslitcclient {
+  height: 45vh;
+}
+
+.Hoslitcclient h1,
+.Hoslitcclient h2,
+.Hoslitcclient h3 {
+  font-size: 2vw;
+  margin: 1.6vw 0;
+  margin: 3vw 0;
+}
+
+.Servicesmarqueeandcards{
+  height: 100vh;
+  margin-top: 6vw;
+}
+
+.Servicesmarqueecards {
+  width: 100%;
+  background-color: #004D43  ;
+margin-top: 6vw;
+}
+
+.Servicescards {
+  width: 65%;
+
+}
+.Servicescard{
+  height: 32vh;
+  width: 40%;
+
+
+}
+
+.servicescardinnerbottom h2,h3{
+  color: white;
+  font-size: 1.6vw;
+  
+  }
+
+
+  
+.Ourworkcards {
+  height: 60vh;
+  width: 75%;
+  
+}
+
+.Ourworkcard{
+  height: 55vh;
+  width: 40%;
+  margin: 0 2vw;
+}
+.ourworkimage {
+  height: 40vh;
+}
+
+.Ourworkcard h6{
+
+  font-size: 1.7vw;
+}
+.Contact{
+  width: 100%;
+  margin-top: 10vw;
+
+}
+
+.Contactform{
+  height: 90vh;
+  margin-top: 6vw;
+  margin-bottom: 4vw;
+
+}
+.Contactform h1{
+  font-size: 4vw;
+}
+
+    }
