@@ -4,10 +4,6 @@ import { motion } from 'framer-motion';
 const Marquee = ({ data }) => {
   console.log(data);
 
-  if (!data || data.length === 0) {
-    return <p>No data available</p>; 
-  }
-
   return (
     <div data-scroll data-scroll-speed='0.1' className="Marquee">
       {data.map((elem, index) => {
